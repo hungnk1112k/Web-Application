@@ -1,0 +1,346 @@
+/*
+filename: style.css
+author: Khanh Hung Nguyen
+created: 28/03/2019
+last modified: 01/05/2019
+description: index.html, jobs.html, apply.html, about.html, enhancements.html
+*/
+* {
+	font-family: "Times New Roman";
+	font-size: 13pt;
+}
+nav{
+	margin-bottom: 10px;
+	clear: both;
+}
+nav ul {
+	background-color: rgb(85,0,0);
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+nav ul li {
+	display: inline-block;
+	font-size: 90%;
+}
+li {
+	border-right: 1px solid #bbb;
+}
+nav ul li:last-child {
+	border-right: none;
+}
+nav ul li a {
+	background-color: rgb(85,0,0);
+	display: block;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 1em 1em;
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
+nav ul li a:hover {
+	background-color: rgb(192,192,192);
+	color: rgb(0,0,0); 
+	transform: scale(1.1, 1.1);
+}
+li#index a , li#jobs a , li#apply a , li#about a , li#enhancements a, li#enhancements2 a, li#enhancementsphp a {
+	background-color: rgb(119,136,153);
+	color: rgb(255,255,255);
+}
+article {
+	/*background-image: url(images/color_background.png);*/
+	background-color: rgb(104, 132, 165);
+	background-size: 100% 100%; /* stretch the image in both x and y direction */ 
+	color: rgb(36,36,36);
+	border: 3px solid #f1f1f1;
+	top: 50%;
+	left: 50%;
+	padding: 1em 15em 3em 15em;
+}
+article section h2, article h2, section h2 {
+	text-align: center;
+	font-family: Arial;
+	font-style: italic;
+	font-size: 150%;
+	color: rgb(205, 45, 4);
+}
+h1 { 
+	font-family: Arial, sans-serif;	
+	font-style: italic;
+	font-size: 200%;
+	text-align: center;
+}
+h2 {
+	font-size: 150%;
+}
+section ul {
+	list-style-type: disc;
+}
+section ul li ul {
+	list-style-type: square;
+}
+aside {
+	width: 25%;
+	float: right;
+	border: 3px solid red;
+	border-radius: 14px;
+	padding: 0.5em 0.5em 0.5em 1.5em;
+}
+footer {
+	width: 100%;
+	background: url(images/footer_background.jpg) repeat-x top left;
+	border: 3px solid black;
+	border-radius: 10px;
+	text-align: center;
+	font-size: small;
+	clear: both;
+}
+hr {
+	clear:both;
+}
+dt {
+	float: left;
+	font-weight: bold;
+}
+dt::after {
+    content: ": "; /*white space at the end is deleted deliberately */
+	white-space: pre; /*This line allows space after ":" */
+}
+.first {
+	clear:left;
+}
+figure img {
+	border: 5px solid black;
+	border-radius: 50%;
+	float: right;
+}
+/* rotate image infinitely */
+figure img:hover {
+	animation: rotation 3s infinite linear;
+}
+@keyframes rotation { /* Reference: https://www.w3schools.com/css/css3_animations.asp */
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+table, th, td {
+	border: 1px solid black; 
+}
+.COS10011 {
+	background-color: pink;
+}
+.COS10003 {
+	background-color: #00CCCC;
+}
+.COS10009 {
+	background-color: #CCCCFF;
+}
+.TNE10006 {
+	background-color: #CCCC99;
+}
+header h1 {
+	font-family: arial;
+	font-style: normal;
+	font-size: 30px;
+	width: 100%; 
+	text-align: center; 
+	line-height: 1.5em;
+	margin: 10px 0 20px; 
+	padding-top: 1.5em;
+}
+body a img {
+	float: right;
+	margin-bottom: 0.5em;
+}
+fieldset ul {
+	list-style-type: none;
+}
+input:checked + label, a:hover {
+	font-size: 120%;
+	font-style: normal;
+}
+table {
+	table-layout: fixed;
+	width: 100%;
+	height: 100%;
+}
+.button {
+	background-color: rgb(76, 184, 223);
+	border-radius: 6px;
+	color: black; 
+	display: block;
+	padding: .5em .5em;
+	margin: .5em 0 .5em;
+	text-align: center;
+	text-transform: uppercase;
+	float:left;
+}
+
+.button:hover {
+	background-color: rgb(76, 101, 255);
+	box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+	transform: scale(1.1, 1.1); /* make border in x and y direction 1.1 times bigger */
+	/* Reference: https://www.w3schools.com/css/css3_2dtransforms.asp */
+}
+.animatedhover:hover { /* Reference: https://github.com/daneden/animate.css/issues/170 */
+	animation-duration: 1.5s;
+	animation-iteration-count:infinite;
+}
+/* Reference: https://codepen.io/owlsky/pen/FCovk */
+#part_1 , #part_2 , #part_3{
+    display: none;
+}
+
+.container {
+	width: 100%;
+	margin: 20px auto;
+	padding: 0;
+	list-style: none;
+}
+
+.container label {
+	display: block;
+	position: relative;
+	cursor: pointer; /* to show that it's clickable */
+	font-size: 18px;
+	font-weight: bold;
+	padding: 10px 20px;
+	color: black;
+	background-color: rgb(238, 238, 238);
+	border-bottom: 1px solid rgb(221,221,221); /* draw a line between 2 containers */
+}
+
+.container label:after {
+	content: "";
+	width: 0;
+	height: 0;
+	/* draw downward black triangle */ 
+	/* Reference: https://css-tricks.com/the-shapes-of-css/ */
+	border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid black;
+	position: absolute;
+	/* move the triangle to the end */
+	right: 10px;
+	top: 16px;
+}
+
+.container input:checked + label, .container label:hover {
+	background-color: rgb(221,221,221);
+	color: black;
+}
+
+.container input:checked + label:after {
+	border-top: 8px solid transparent; /* hide the downward triangle */
+	/* draw upward black triangle */
+	border-right: 6px solid transparent;
+	border-bottom: 8px solid black;
+	border-left: 6px solid transparent;
+	top: 6px; /* shift the triangle up */
+}
+
+.content {
+	padding: 0 20px 20px;
+	display: none; /* not showing what's inside */
+}
+
+.container input:checked ~ .content {
+	display: block; /*show what's inside */
+}
+
+/*added in assignment 2 */
+article span img {
+	width: 100%;
+	height: 400px;
+}
+
+#slider {
+    width: 800px;
+    height: 300px;
+    overflow: hidden;
+}
+
+#slider #slides {
+    display: block;
+    width: 6000px;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+}
+
+#slider .slide {
+    float: left;
+    list-style-type: none;
+    width: 800px;
+    height: 300px;
+	float: left; 
+	position: relative;  
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/*
+.slide1 {background-image: url(images/color_background.png);}
+.slide2 {background-image: url(images/color_background.png);}
+.slide3 {background-image: url(images/color_background.png);}
+.slide4 {background-image: url(images/color_background.png);}
+.slide5 {background-image: url(images/color_background.png);}
+*/
+.slide1 {background-color: rgb(104, 132, 165);}
+.slide2 {background-color: rgb(104, 132, 165);}
+.slide3 {background-color: rgb(104, 132, 165);}
+.slide4 {background-color: rgb(104, 132, 165);}
+.slide5 {background-color: rgb(104, 132, 165);}
+
+#scroll {
+    position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 6%;
+	opacity: 0.5;
+	border: 3px solid #73AD21;
+    background:#eaeaea;
+}
+
+#scroll:hover {
+	opacity: 1;
+}
+
+/*for enhancements 2*/
+.tab-panels ul {
+    margin: 0;
+    padding: 0;
+}
+.tab-panels ul li {
+    list-style-type: none;
+    display: inline-block;
+    background: #999;
+    margin: 0;
+    padding: 3px 10px;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+    font-weight: 200;
+	font-size: 125%;
+    cursor: pointer;
+}
+
+.tab-panels ul li:hover, .tab-panels ul li.active {
+    color: #fff;
+    background: #666;
+}
+
+.tab-panels .panel {
+    display:none;
+    background: #c9c9c9;
+    padding: 30px;
+    border-radius: 0 0 10px 10px;
+}
+
+.tab-panels .panel.active {
+    display:block;
+}
+
+	
